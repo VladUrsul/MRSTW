@@ -18,6 +18,21 @@ namespace ElectronicsShop.Web
            AreaRegistration.RegisterAllAreas();
            RouteConfig.RegisterRoutes(RouteTable.Routes);
            BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+           ViewEngines.Engines.Clear();
+           ViewEngines.Engines.Add(new RazorViewEngine
+           {
+                PartialViewLocationFormats = new string[]
+                {
+                    "~/Areas/AdminPanel/Views/{1}/{0}.cshtml",
+                    "~/Areas/AdminPanel/Views/Shared/{0}.cshtml"
+                },
+                ViewLocationFormats = new string[]
+                {
+                    "~/Areas/AdminPanel/Views/{1}/{0}.cshtml",
+                    "~/Areas/AdminPanel/Views/Shared/{0}.cshtml"
+                }
+           });
         }
     }
 }

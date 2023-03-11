@@ -311,7 +311,7 @@
     <Content Include="Areas\AdminPanel\Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\_Sidebar.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\Authentification\_AuthLayoutView.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Shared\_AuthLayoutView.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Authentification\Login.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Authentification\Register.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Home\Index.cshtml" />
