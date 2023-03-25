@@ -311,9 +311,9 @@
     <Content Include="Areas\AdminPanel\Views\Shared\_Footer.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Shared\_Sidebar.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\Shared\_AuthLayoutView.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\Authentification\Login.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\Authentification\Register.cshtml" />
+    <Content Include="Views\Shared\_AuthLayoutView.cshtml" />
+    <Content Include="Views\Authentification\Login.cshtml" />
+    <Content Include="Views\Authentification\Register.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Home\Index.cshtml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -327,8 +327,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
-    <Compile Include="Areas\AdminPanel\Controllers\AuthentificationController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
+    <Compile Include="Controllers\AuthentificationController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -359,6 +360,12 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -370,7 +377,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
