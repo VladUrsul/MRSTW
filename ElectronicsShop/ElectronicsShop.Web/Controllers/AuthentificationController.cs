@@ -11,12 +11,12 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
         // GET: AdminPanel/Authentification
         public ActionResult Login()
         {
-            return View();
+            return View("~/Views/Authentification/Login.cshtml");
         }
         // GET: AdminPanel/Authentification
         public ActionResult Register()
         {
-            return View();
+            return View("~/Views/Authentification/Register.cshtml");
         }
     }
 }

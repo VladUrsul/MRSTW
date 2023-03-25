@@ -1,11 +1,13 @@
 ﻿@{
-    var controller = HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString().ToLower();
-    if (controller != "auth")
+    var actionName = ViewContext.RouteData.Values["action"].ToString();
+
+    // Check if the view is in the "Store" area
+    if (actionName.StartsWith("Store/"))
     {
-        Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+        Layout = "~/Areas/Store/Views/Shared/_Layout.cshtml";
     }
     else
     {
-        Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+        Layout = "~/Views/Shared/_Layout.cshtml";
     }
 }

@@ -6,22 +6,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    @Styles.Render("~/Areas/AdminPanel/Content/style")
-    @Styles.Render("~/Areas/AdminPanel/Content/materialDesignIcons")
+    @Styles.Render("~/Content/style")
+    @Styles.Render("~/Content/materialDesignIcons")
     @Styles.Render("~/Areas/AdminPanel/Content/base")
 
-    @Scripts.Render("~/Areas/AdminPanel/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
 
     @RenderBody()
     <!-- Section for main scripts render -->
-    @Scripts.Render("~/Areas/AdminPanel/bundles/jquery")
-    @Scripts.Render("~/Areas/AdminPanel/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 
     <!-- Template JS-->
-    @Scripts.Render("~/Areas/AdminPanel/Content/js/base")
-    @Scripts.Render("~/Areas/AdminPanel/Content/js/misc")
+    @Scripts.Render("~/Content/js/base")
+    @Scripts.Render("~/Content/js/misc")
 
     <!-- Handler for local scripts -->
     @RenderSection("scripts", required: false)
