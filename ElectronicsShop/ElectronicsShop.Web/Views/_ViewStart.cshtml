@@ -1,0 +1,13 @@
+﻿@{
+    var actionName = ViewContext.RouteData.Values["action"].ToString();
+
+    // Check if the view is in the "Store" area
+    if (actionName.StartsWith("Store/"))
+    {
+        Layout = "~/Areas/Store/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}

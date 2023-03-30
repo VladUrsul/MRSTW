@@ -1,0 +1,47 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/style")
+    @Styles.Render("~/Content/materialDesignIcons")
+    @Styles.Render("~/Content/base")
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- Navigation -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            @Html.Partial("_Navigation")
+        </nav>
+
+        <!-- Page Body -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- Sidebar -->
+            @Html.Partial("_Sidebar")
+            <!-- Main view -->
+            <section class="main-panel">
+                @RenderBody()
+                <!-- Footer -->
+                @Html.Partial("_Footer")
+            </section>
+        </div>
+    </div>
+
+    <!-- Section for main scripts render -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- Template JS-->
+    @Scripts.Render("~/Content/js/base")
+    @Scripts.Render("~/Content/js/misc")
+
+    <!-- Handler for local scripts -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>
