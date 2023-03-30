@@ -1,0 +1,65 @@
+﻿@using System.Web.Optimization
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/style")
+    @Styles.Render("~/Content/materialDesignIcons")
+    @Styles.Render("~/Content/base")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 80px; /* Height of the footer */
+            background-color: #f5f5f5;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- Navigation -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            @Html.Partial("~/Areas/Store/Views/Shared/_Navigation.cshtml");
+        </nav>
+
+        <!-- Page Body -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <main role="main" class="pb-5 mb-0">
+                        @RenderBody()
+                    </main>
+                </div>
+            </div>
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-lg-12">
+                    @Html.Partial("_Footer")
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Section for main scripts render -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- Template JS-->
+    @Scripts.Render("~/Content/js/base")
+    @Scripts.Render("~/Content/js/misc")
+
+    <!-- Handler for local scripts -->
+    @RenderSection("scripts", required: false)
+</body>
+</html>

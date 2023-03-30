@@ -24,13 +24,13 @@ namespace ElectronicsShop.Web
            {
                 PartialViewLocationFormats = new string[]
                 {
-                    "~/Areas/AdminPanel/Views/{1}/{0}.cshtml",
-                    "~/Areas/AdminPanel/Views/Shared/{0}.cshtml"
+                    "~/Views/{1}/{0}.cshtml",
+                    "~/Views/Shared/{0}.cshtml"
                 },
                 ViewLocationFormats = new string[]
                 {
-                    "~/Areas/AdminPanel/Views/{1}/{0}.cshtml",
-                    "~/Areas/AdminPanel/Views/Shared/{0}.cshtml"
+                    "~/Views/{1}/{0}.cshtml",
+                    "~/Views/Shared/{0}.cshtml"
                 }
            });
         }
