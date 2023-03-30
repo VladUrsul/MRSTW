@@ -228,6 +228,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -338,6 +339,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
+    <Folder Include="Views\Shared\" />
     <Folder Include="Areas\AdminPanel\Views\Shared\" />
     <Folder Include="Areas\Store\Data\" />
   </ItemGroup>
