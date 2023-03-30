@@ -332,6 +332,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -369,7 +370,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
