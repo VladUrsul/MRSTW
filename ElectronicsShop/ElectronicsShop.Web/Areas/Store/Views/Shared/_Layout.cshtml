@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Electronics Shop</title>
 
     @Styles.Render("~/Content/style")
     @Styles.Render("~/Content/materialDesignIcons")
@@ -18,8 +18,9 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            height: 80px; /* Height of the footer */
-            background-color: #f5f5f5;
+            height: 60px; /* Height of the footer */
+            background-color: #ffffff;
+            background-blend-mode:color-dodge;
         }
     </style>
 
@@ -28,7 +29,7 @@
 <body>
     <div class="container-scroller">
         <!-- Navigation -->
-        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 relative-top d-center flex-row">
             @Html.Partial("~/Areas/Store/Views/Shared/_Navigation.cshtml");
         </nav>
 

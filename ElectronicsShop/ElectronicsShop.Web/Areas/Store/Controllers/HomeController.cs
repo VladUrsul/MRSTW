@@ -9,6 +9,7 @@ namespace ElectronicsShop.Web.Areas.Store.Controllers
     public class HomeController : Controller
     {
         // GET: Store/Home
+        
         public ActionResult Index()
         {
             return View("~/Areas/Store/Views/Home/Index.cshtml");
