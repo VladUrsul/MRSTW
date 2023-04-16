@@ -190,7 +190,7 @@
     <Content Include="Content\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Areas\AdminPanel\Views\web.config" />
-    <Content Include="Views\Shared\_AuthLayoutView.cshtml" />
+    <Content Include="Views\Authentification\_Layout.cshtml" />
     <Content Include="Views\Authentification\Register.cshtml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -217,6 +217,7 @@
     <Content Include="Scripts\jquery-3.6.4.min.js" />
     <Content Include="Scripts\jquery-3.6.4.js" />
     <Content Include="Scripts\jquery-3.6.4-vsdoc.js" />
+    <Content Include="Views\Authentification\Login.cshtml" />
     <None Include="webfonts\fa-solid-900.woff2" />
     <Content Include="webfonts\fa-solid-900.woff" />
     <Content Include="webfonts\fa-solid-900.ttf" />
@@ -262,7 +263,6 @@
     <Content Include="Content\all.css" />
     <Content Include="Content\images\faces\Bogdan.JPG" />
     <Content Include="Content\images\logo_website.png" />
-    <Content Include="Areas\Store\Views\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -385,10 +385,23 @@
     <Folder Include="Areas\AdminPanel\Data\" />
     <Folder Include="Areas\AdminPanel\Views\Shared\" />
     <Folder Include="Areas\Store\Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElectronicsShop.BusinessLogic\ElectronicsShop.BusinessLogic.csproj">
+      <Project>{a2f7ac10-9f04-4e32-9cef-ba86fb13acd5}</Project>
+      <Name>ElectronicsShop.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElectronicsShop.Data\ElectronicsShop.Data.csproj">
+      <Project>{13e490f4-a223-4343-9643-446123130b30}</Project>
+      <Name>ElectronicsShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElectronicsShop.Domain\ElectronicsShop.Domain.csproj">
+      <Project>{a000c343-6b38-4445-b82f-260d96fd1167}</Project>
+      <Name>ElectronicsShop.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

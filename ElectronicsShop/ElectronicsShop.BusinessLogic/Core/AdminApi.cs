@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicsShop.BusinessLogic.Core
 {
-    internal class AdminApi
+    public class AdminApi
     {
     }
 }

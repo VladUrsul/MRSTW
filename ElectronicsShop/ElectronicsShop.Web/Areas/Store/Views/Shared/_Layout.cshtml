@@ -10,7 +10,6 @@
     @Styles.Render("~/Content/style")
     @Styles.Render("~/Content/materialDesignIcons")
     @Styles.Render("~/Content/base")
-
     @Scripts.Render("~/bundles/modernizr")
 
     <style>
@@ -27,7 +26,7 @@
 
 </head>
 <body>
-    <div class="container-scroller">
+    <div class="container-scroller" style="padding-top: 40px">
         <!-- Navigation -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 relative-top d-center flex-row">
             @Html.Partial("~/Areas/Store/Views/Shared/_Navigation.cshtml");
@@ -42,25 +41,14 @@
                     </main>
                 </div>
             </div>
-            <!-- Footer -->
-            <div class="row">
-                <div class="col-lg-12">
-                    @Html.Partial("_Footer")
-                </div>
-            </div>
         </div>
 
     </div>
 
-    <!-- Section for main scripts render -->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
-    <!-- Template JS-->
     @Scripts.Render("~/Content/js/base")
     @Scripts.Render("~/Content/js/misc")
-
-    <!-- Handler for local scripts -->
     @RenderSection("scripts", required: false)
 </body>
 </html>

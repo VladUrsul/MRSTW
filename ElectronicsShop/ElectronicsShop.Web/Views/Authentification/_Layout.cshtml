@@ -5,25 +5,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     @Styles.Render("~/Content/style")
     @Styles.Render("~/Content/materialDesignIcons")
-    @Styles.Render("~/Areas/AdminPanel/Content/base")
-
+    @Styles.Render("~/Content/base")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-
     @RenderBody()
-    <!-- Section for main scripts render -->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-
-    <!-- Template JS-->
     @Scripts.Render("~/Content/js/base")
     @Scripts.Render("~/Content/js/misc")
-
-    <!-- Handler for local scripts -->
     @RenderSection("scripts", required: false)
 </body>
 </html>

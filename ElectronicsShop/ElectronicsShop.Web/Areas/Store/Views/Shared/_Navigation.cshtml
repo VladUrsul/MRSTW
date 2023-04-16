@@ -1,11 +1,44 @@
-﻿<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="/Content/images/logo_website.png" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/Content/images/logo_website.png" alt="logo" /></a>
+﻿<style>
+    .navbar.default-layout-navbar {
+        max-width: 1300px;
+        margin: 0 auto;
+        border-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #ffffff;
+    }
+
+    .navbar-brand-wrapper {
+        background-color: transparent;
+    }
+
+    body {
+        background-color: #f2edf3;
+    }
+</style>
+
+<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="margin-top: 20px">
+    @*<div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="/Content/images/logo.svg" alt="logo" / style="margin-left: 70px"></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/Content/images/logo-mini.svg" alt="logo" / style="margin-left: 70px"></a>
     </div>
-    <div class="navbar-menu-wrapper d-flex align-items-stretch">
-        
-        <div class="search-field d-none d-md-block">
+*@
+    <div class="navbar-menu-wrapper d-flex align-items-stretch flex-grow-1 flex-shrink-0">
+
+        <ul class="navbar-nav flex-shrink-0" style="margin-left: 0px">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="mdi mdi-menu"></i> Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Action</button></li>
+                    <li><button class="dropdown-item" type="button">Another action</button></li>
+                    <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="search-field d-none d-md-block flex-shrink-0" style="margin-left: 50px">
             <form class="d-flex align-items-center h-100" action="#">
                 <div class="input-group">
                     <div class="input-group-prepend bg-transparent">
@@ -15,85 +48,26 @@
                 </div>
             </form>
         </div>
+
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+            <a class="navbar-brand brand-logo" href="index.html"><img src="/Content/images/logo.svg" alt="logo" / style="margin-left: 70px"></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/Content/images/logo-mini.svg" alt="logo" / style="margin-left: 70px"></a>
+        </div>
+
         <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="nav-profile-img">
-                        <img src="/Content/images/faces/Bogdan.jpg" alt="image">
-                        <span class="availability-status online"></span>
-                    </div>
-                    <div class="nav-profile-text">
-                        <p class="mb-1 text-black">Bogdan Boicu</p>
-                    </div>
-                </a>
-                <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                    <a class="dropdown-item" href="#">
-                        <i class="mdi mdi-equal "></i> My Orders
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="Areas/Store/Login.cshtml">
-                        <i class="mdi mdi-logout me-2 text-primary"></i> Signout
-                    </a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="mdi mdi-email-outline"></i>
+            <li class="nav-item dropdown flex-shrink-0">
+                <a class="nav-link count-indicator dropdown-toggle">
+                    <i class="mdi mdi-cart-outline"></i>
                     <span class="count-symbol bg-warning"></span>
                 </a>
-           
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                    <i class="mdi mdi-bell-outline"></i>
-                    <span class="count-symbol bg-danger"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                    <h6 class="p-3 mb-0">Notifications</h6>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-success">
-                                <i class="mdi mdi-calendar"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-warning">
-                                <i class="mdi mdi-settings"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                            <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
-                            <p class="text-gray ellipsis mb-0"> Update dashboard </p>
-                        </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item preview-item">
-                        <div class="preview-thumbnail">
-                            <div class="preview-icon bg-info">
-                                <i class="mdi mdi-link-variant"></i>
-                            </div>
-                        </div>
-                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                            <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
-                            <p class="text-gray ellipsis mb-0"> New admin wow! </p>
-                        </div>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <h6 class="p-3 mb-0 text-center">See all notifications</h6>
-                </div>
-            </li>
-            
-            
-            <li class="nav-item account-box-line d-none d-lg-block">
-                <a class="nav-link" href="#">
-                    <i class="mdi mdi-account-box-outline"></i>
+            <li class="nav-item dropdown flex-shrink-0" style="margin-right: 0px">
+                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="@Url.Action("Login", "Authentification", new { area = "", returnUrl = Request.Path })">
+                    <i class="mdi mdi-login-variant"></i>
                 </a>
             </li>
+
         </ul>
-        
+
     </div>
 </nav>
