@@ -207,7 +207,7 @@
     <Content Include="Areas\Store\Views\Home\Index.cshtml" />
     <Content Include="Areas\Store\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Store\Views\Shared\_Navigation.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\Products\Products.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Orders\Orders.cshtml" />
     <None Include="Scripts\jquery-3.6.3.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -275,7 +275,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
-    <Compile Include="Areas\AdminPanel\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\OrdersController.cs" />
     <Compile Include="Areas\Store\Controllers\HomeController.cs" />
     <Compile Include="Areas\Store\StoreAreaRegistration.cs" />
     <Compile Include="Controllers\AuthentificationController.cs" />

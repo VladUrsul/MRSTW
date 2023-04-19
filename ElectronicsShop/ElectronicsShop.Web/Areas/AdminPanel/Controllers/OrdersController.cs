@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
 {
-    public class ProductsController : Controller
+    public class OrdersController : Controller
     {
-        public ActionResult Products()
+        public ActionResult Orders()
         {
-            return View("~/Areas/AdminPanel/Views/Products/Products.cshtml");
+            return View("~/Areas/AdminPanel/Views/Orders/Orders.cshtml");
         }
     }
 }
