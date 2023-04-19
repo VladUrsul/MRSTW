@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,10 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contexts\ShopDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Contexts\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
@@ -62,10 +63,6 @@
     <ProjectReference Include="..\ElectronicsShop.Domain\ElectronicsShop.Domain.csproj">
       <Project>{a000c343-6b38-4445-b82f-260d96fd1167}</Project>
       <Name>ElectronicsShop.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ElectronicsShop.Helpers\ElectronicsShop.Helpers.csproj">
-      <Project>{9a9bdfed-3b53-40af-8de7-442e2d83f047}</Project>
-      <Name>ElectronicsShop.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

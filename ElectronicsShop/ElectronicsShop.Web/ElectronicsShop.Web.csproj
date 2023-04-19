@@ -122,6 +122,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\site.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\images\auth\lockscreen-bg.jpg" />
     <Content Include="Content\images\auth\login-bg.jpg" />
@@ -190,8 +191,10 @@
     <Content Include="Content\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Areas\AdminPanel\Views\web.config" />
-    <Content Include="Views\Authentification\_Layout.cshtml" />
-    <Content Include="Views\Authentification\Register.cshtml" />
+    <Content Include="Scripts\category.js" />
+    <Content Include="Scripts\category-navigation.js" />
+    <Content Include="Views\Account\_Layout.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -202,6 +205,7 @@
     <Content Include="Areas\Store\Views\Home\Index.cshtml" />
     <Content Include="Areas\Store\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Store\Views\Shared\_Navigation.cshtml" />
+    <Content Include="Areas\Store\Views\Shared\_ProductGrid.cshtml" />
     <None Include="Scripts\jquery-3.6.3.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -217,7 +221,7 @@
     <Content Include="Scripts\jquery-3.6.4.min.js" />
     <Content Include="Scripts\jquery-3.6.4.js" />
     <Content Include="Scripts\jquery-3.6.4-vsdoc.js" />
-    <Content Include="Views\Authentification\Login.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="webfonts\fa-solid-900.woff2" />
     <Content Include="webfonts\fa-solid-900.woff" />
     <Content Include="webfonts\fa-solid-900.ttf" />
@@ -270,11 +274,14 @@
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\Store\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Store\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Store\StoreAreaRegistration.cs" />
-    <Compile Include="Controllers\AuthentificationController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\SignupViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -385,6 +392,7 @@
     <Folder Include="Areas\AdminPanel\Data\" />
     <Folder Include="Areas\AdminPanel\Views\Shared\" />
     <Folder Include="Areas\Store\Data\" />
+    <Folder Include="Areas\Store\Views\Products\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -394,13 +402,13 @@
       <Project>{a2f7ac10-9f04-4e32-9cef-ba86fb13acd5}</Project>
       <Name>ElectronicsShop.BusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ElectronicsShop.Data\ElectronicsShop.Data.csproj">
-      <Project>{13e490f4-a223-4343-9643-446123130b30}</Project>
-      <Name>ElectronicsShop.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ElectronicsShop.Domain\ElectronicsShop.Domain.csproj">
       <Project>{a000c343-6b38-4445-b82f-260d96fd1167}</Project>
       <Name>ElectronicsShop.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ElectronicsShop.Helpers\ElectronicsShop.Helpers.csproj">
+      <Project>{9a9bdfed-3b53-40af-8de7-442e2d83f047}</Project>
+      <Name>ElectronicsShop.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
