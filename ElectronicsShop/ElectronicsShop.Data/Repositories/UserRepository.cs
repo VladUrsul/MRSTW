@@ -43,6 +43,11 @@ namespace ElectronicsShop.Data.Repositories
             return _dbContext.Users.SingleOrDefault(u => u.UserName == username);
         }
 
+        public User GetUserById(int id)
+        {
+            return _dbContext.Users.SingleOrDefault(u => u.Id == id);
+        }
+
         public List<User> GetAllUsers()
         {
             return _dbContext.Users.ToList();
