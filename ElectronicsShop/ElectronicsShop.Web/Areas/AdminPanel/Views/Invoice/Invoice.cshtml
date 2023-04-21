@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <div class="card-body">
+        <div class="container-fluid">
+            <h3 class="text-right my-5">Invoice&nbsp;&nbsp;#0003</h3>
+            <hr>
+        </div>
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="col-lg-3 pl-0">
+                <p class="mt-5 mb-2"><b>ITshniki</b></p>
+                <p>Moldova,<br>UTM, TI-216.</p>
+            </div>
+            <div class="col-lg-3 pr-0">
+                <p class="mt-5 mb-2 text-right"><b>Invoice to</b></p>
+                <p class="text-right">John Wick,<br>Holywood,<br> USA.</p>
+            </div>
+        </div>
+        <div class="container-fluid d-flex justify-content-between">
+            <div class="col-lg-3 pl-0">
+                <p class="mb-0 mt-5">Invoice Date : 20th Apr 2023</p>
+                <p>Due Date : 25th Apr 2023</p>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 d-flex justify-content-center w-100">
+            <div class="table-responsive w-100">
+                <table class="table">
+                    <thead>
+                        <tr class="bg-dark text-white">
+                            <th>#</th>
+                            <th>Description</th>
+                            <th class="text-right">Quantity</th>
+                            <th class="text-right">Unit cost</th>
+                            <th class="text-right">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-right">
+                            <td class="text-left">1</td>
+                            <td class="text-left">OLED Samsung Monitor</td>
+                            <td>1</td>
+                            <td>$480</td>
+                            <td>$480</td>
+                        </tr>
+                        <tr class="text-right">
+                            <td class="text-left">2</td>
+                            <td class="text-left">HDMI Cable</td>
+                            <td>2</td>
+                            <td>$10</td>
+                            <td>$20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 w-100">
+            <p class="text-right mb-2">Total amount: $500</p>
+            <hr>
+        </div>
+        <div class="container-fluid w-100">
+            <a href="#" class="btn btn-primary float-right mt-4 ml-2"><i class="mdi mdi-printer mr-1"></i>Print</a>
+            <a href="#" class="btn btn-success float-right mt-4"><i class="mdi mdi-telegram mr-1"></i>Send Invoice</a>
+        </div>
+    </div>
+</head>
