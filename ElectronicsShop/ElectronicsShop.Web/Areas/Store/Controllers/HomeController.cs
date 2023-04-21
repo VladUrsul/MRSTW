@@ -1,8 +1,11 @@
-﻿using System;
+﻿using ElectronicsShop.Domain.Entities;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ElectronicsShop.Data;
 
 namespace ElectronicsShop.Web.Areas.Store.Controllers
 {

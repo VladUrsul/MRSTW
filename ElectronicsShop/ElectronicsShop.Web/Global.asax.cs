@@ -1,27 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Unity;
+using Unity.AspNet.Mvc;
 using System.Web.Security;
 using System.Web.SessionState;
+using ElectronicsShop.Data.Contexts;
+using ElectronicsShop.Data.Repositories;
+using Unity.Injection;
+using ElectronicsShop.Domain.Entities;
+using Microsoft.Ajax.Utilities;
+using System.Configuration;
 
 namespace ElectronicsShop.Web
 {
-    public class Global : HttpApplication
+    public class Global : System.Web.HttpApplication
     {
-        void Application_Start(object sender, EventArgs e)
+        protected void Application_Start()
         {
-            // Code that runs on application startup
-           AreaRegistration.RegisterAllAreas();
-           RouteConfig.RegisterRoutes(RouteTable.Routes);
-           BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AreaRegistration.RegisterAllAreas();
+            RouteConfig.RegisterRoutes(System.Web.Routing.RouteTable.Routes);
+            BundleConfig.RegisterBundles(System.Web.Optimization.BundleTable.Bundles);
 
-           ViewEngines.Engines.Clear();
-           ViewEngines.Engines.Add(new RazorViewEngine
-           {
+            // Configure the connection string
+            string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ElectronicsShopDb"].ConnectionString;
+
+            // Register ShopDbContext
+            Database.SetInitializer<ShopDbContext>(null);
+            var dbContext = new ShopDbContext(connectionString);
+            dbContext.Database.Initialize(true);
+
+            // Create a new Unity Container instance
+            var container = new UnityContainer();
+
+            // Register the ShopDbContext with the DI container
+            container.RegisterType<ShopDbContext>(new InjectionConstructor(ConfigurationManager.ConnectionStrings["ElectronicsShopDb"].ConnectionString));
+
+            // Register the UserRepository with the DI container, with the ShopDbContext dependency injected
+            container.RegisterType<UserRepository>(new InjectionConstructor(typeof(ShopDbContext)));
+
+            // Set the MVC dependency resolver to use Unity
+            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine
+            {
                 PartialViewLocationFormats = new string[]
                 {
                     "~/Views/{1}/{0}.cshtml",
@@ -32,7 +61,7 @@ namespace ElectronicsShop.Web
                     "~/Views/{1}/{0}.cshtml",
                     "~/Views/Shared/{0}.cshtml"
                 }
-           });
+            });
         }
     }
 }

@@ -6,8 +6,12 @@
     {
         Layout = "~/Areas/Store/Views/Shared/_Layout.cshtml";
     }
+    if (actionName.StartsWith("Account/"))
+    {
+        Layout = "~/Views/Account/_Layout.cshtml";
+    }
     else
     {
-        Layout = "~/Areas/AdminPanel/Views/Shared/_Layout.cshtml";
+        Layout = "~/Views/Shared/_Layout.cshtml";
     }
 }
