@@ -32,7 +32,7 @@
         </div>
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
-                <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" id="profileDropdown" href="@Url.Action("AdminAccount", "Home", new { area = "", returnUrl = Request.Path })" data-bs-toggle="dropdown" aria-expanded="false">
                     <div class="nav-profile-img">
                         <img src="/Content/images/faces/face17.jpg" alt="image">
                         <span class="availability-status online"></span>

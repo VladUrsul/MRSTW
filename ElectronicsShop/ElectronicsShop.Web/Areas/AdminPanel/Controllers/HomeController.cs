@@ -12,5 +12,9 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
         {
             return View("~/Areas/AdminPanel/Views/Home/Index.cshtml");
         }
+        public ActionResult AdminAccount()
+        {
+            return View("~/Areas/AdminPanel/Views/Home/AdminAccount.cshtml");
+        }
     }
 }

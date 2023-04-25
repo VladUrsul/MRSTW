@@ -277,6 +277,9 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\category.js" />
     <Content Include="Scripts\category-navigation.js" />
+    <Content Include="Areas\AdminPanel\Views\Home\AdminAccount.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Categories\Categories.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Products\Products.cshtml" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.min.js" />
@@ -383,14 +386,16 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Areas\AdminPanel\AdminPanelAreaRegistration.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\CartController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\InvoiceController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\OrdersController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\UsersController.cs" />
     <Compile Include="Areas\Store\Controllers\HomeController.cs" />
     <Compile Include="Areas\Store\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Store\StoreAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -481,10 +486,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
-    <Folder Include="Areas\AdminPanel\Views\Shared\" />
+    <Folder Include="Areas\AdminPanel\Views\Users\" />
     <Folder Include="Areas\Store\Data\" />
     <Folder Include="Areas\Store\Views\Products\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

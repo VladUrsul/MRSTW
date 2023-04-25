@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form>
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <select class="form-control" id="category" name="category">
+            <option value="">-- Select a category --</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 2</option>
+            <option value="3">Category 3</option>
+            <!-- add more categories here as needed -->
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="product-name">Product Name:</label>
+        <input type="text" class="form-control" id="product-name" name="product-name" placeholder="Enter product name">
+    </div>
+    <div class="form-group">
+        <label for="product-description">Product Description:</label>
+        <textarea class="form-control" id="product-description" name="product-description" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="product-price">Product Price:</label>
+        <input type="number" class="form-control" id="product-price" name="product-price" step="0.01" placeholder="Enter product price">
+    </div>
+    <button type="submit" class="btn btn-primary">Create Product</button>
+</form>

@@ -13,7 +13,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile">
-            <a href="#" class="nav-link">
+            <a href="@Url.Action("AdminAccount", "Home", new { area = "", returnUrl = Request.Path })" class="nav-link">
                 <div class="nav-profile-image">
                     <img src="/Content/images/faces/face17.jpg" alt="profile">
                     <span class="login-status online"></span>
@@ -27,25 +27,31 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="@Url.Action("Index", "Home", new { area = "", returnUrl = Request.Path })">
                 <span class="menu-title">Home Page</span>
                 <i class="mdi mdi-home menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="@Url.Action("Categories", "Categories", new { area = "", returnUrl = Request.Path })">
+                <span class="menu-title">Categories</span>
+                <i class="mdi mdi-laptop-mac menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="@Url.Action("Products", "Products", new { area = "", returnUrl = Request.Path })">
                 <span class="menu-title">Products</span>
                 <i class="mdi mdi-laptop-mac menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
-                <span class="menu-title">Customers</span>
+                <span class="menu-title">Users</span>
                 <i class="mdi mdi-human menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="@Url.Action("Orders", "Orders", new { area = "", returnUrl = Request.Path })">
                 <span class="menu-title">Orders</span>
                 <i class="mdi mdi-cart menu-icon"></i>
             </a>
