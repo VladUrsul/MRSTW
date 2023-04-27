@@ -17,6 +17,10 @@ namespace ElectronicsShop.Data.Contexts
         }
 
         public DbSet<User> Users { get; set; }
+        //to do
+        public DbSet<Product> Products { get; set; }
+        //to do
+        public DbSet<Category> Categories { get; set; }
 
         // Configure the User entity
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
