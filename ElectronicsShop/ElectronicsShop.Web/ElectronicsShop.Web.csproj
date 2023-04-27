@@ -280,6 +280,7 @@
     <Content Include="Areas\AdminPanel\Views\Home\AdminAccount.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Categories\Categories.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Products\Products.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\Users\Users.cshtml" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.min.js" />
@@ -486,7 +487,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\AdminPanel\Data\" />
-    <Folder Include="Areas\AdminPanel\Views\Users\" />
     <Folder Include="Areas\Store\Data\" />
     <Folder Include="Areas\Store\Views\Products\" />
   </ItemGroup>
