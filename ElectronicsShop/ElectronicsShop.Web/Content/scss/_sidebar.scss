@@ -20,7 +20,7 @@
 
     .nav-item {
       padding:0 $sidebar-menu-padding-x;
-      @include transition-duration(0.25s);
+      @include transition-duration(0.15s);
       transition-property: background;
       -webkit-transition-property: background;
       .collapse {
@@ -35,7 +35,7 @@
         color: $sidebar-light-menu-color;
         @include transition-duration(0.45s);
         transition-property: color;
-        -webkit-transition-property: color;
+        -webkit-transition-property: none;
 
         i {
           color: inherit;
@@ -67,7 +67,7 @@
             &:before{
               content: "\f141";
               font-size: inherit;
-              color: inherit;
+              color: currentColor;
             }
             + .menu-icon {
               margin-left: .25rem;
