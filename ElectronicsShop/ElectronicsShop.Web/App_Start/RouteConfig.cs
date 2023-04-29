@@ -19,6 +19,13 @@ namespace ElectronicsShop.Web
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "ElectronicsShop.Web.Areas.AdminPanel.Controllers" }
             );
+
+            routes.MapRoute(
+                name: "Category",
+                url: "Categories/{action}/{id}",
+                defaults: new { controller = "Categories", action = "Index", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

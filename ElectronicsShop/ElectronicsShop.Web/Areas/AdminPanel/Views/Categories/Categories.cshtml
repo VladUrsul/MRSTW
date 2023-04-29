@@ -1,17 +1,31 @@
-﻿
+﻿@model ElectronicsShop.Web.Areas.AdminPanel.Models.CategoryViewModel
+
 @{
     ViewBag.Title = "Categories";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+
+@using (Html.BeginForm("Create", "Categories", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
     <div class="form-group">
-        <label for="category-name">Category Name:</label>
-        <input type="text" class="form-control" id="category-name" name="category-name" placeholder="Enter category name">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
     </div>
+
     <div class="form-group">
-        <label for="category-description">Category Description:</label>
-        <textarea class="form-control" id="category-description" name="category-description" rows="3"></textarea>
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
     </div>
+
     <button type="submit" class="btn btn-primary">Create Category</button>
-</form>
+}
