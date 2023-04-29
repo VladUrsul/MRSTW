@@ -73,6 +73,18 @@
     <Compile Include="Migrations\202304291941327_AddCategoriesEdit.designer.cs">
       <DependentUpon>202304291941327_AddCategoriesEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304292045260_AddProduct.cs" />
+    <Compile Include="Migrations\202304292045260_AddProduct.designer.cs">
+      <DependentUpon>202304292045260_AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304292107304_AddProductEdit.cs" />
+    <Compile Include="Migrations\202304292107304_AddProductEdit.designer.cs">
+      <DependentUpon>202304292107304_AddProductEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304292119049_AddProductEditEdit.cs" />
+    <Compile Include="Migrations\202304292119049_AddProductEditEdit.designer.cs">
+      <DependentUpon>202304292119049_AddProductEditEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -109,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304291941327_AddCategoriesEdit.resx">
       <DependentUpon>202304291941327_AddCategoriesEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304292045260_AddProduct.resx">
+      <DependentUpon>202304292045260_AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304292107304_AddProductEdit.resx">
+      <DependentUpon>202304292107304_AddProductEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304292119049_AddProductEditEdit.resx">
+      <DependentUpon>202304292119049_AddProductEditEdit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

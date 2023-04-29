@@ -1,31 +1,38 @@
-﻿
+﻿@model ElectronicsShop.Web.Areas.AdminPanel.Models.ProductViewModel
+
 @{
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<form>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post))
+{
     <div class="form-group">
         <label for="category">Category:</label>
-        <select class="form-control" id="category" name="category">
+        <select class="form-control" id="category" name="CategoryId">
             <option value="">-- Select a category --</option>
-            <option value="1">Category 1</option>
-            <option value="2">Category 2</option>
-            <option value="3">Category 3</option>
-            <!-- add more categories here as needed -->
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
         </select>
     </div>
     <div class="form-group">
         <label for="product-name">Product Name:</label>
-        <input type="text" class="form-control" id="product-name" name="product-name" placeholder="Enter product name">
+        <input type="text" class="form-control" id="product-name" name="Name" placeholder="Enter product name">
     </div>
     <div class="form-group">
         <label for="product-description">Product Description:</label>
-        <textarea class="form-control" id="product-description" name="product-description" rows="3"></textarea>
+        <textarea class="form-control" id="product-description" name="Description" rows="3"></textarea>
     </div>
     <div class="form-group">
         <label for="product-price">Product Price:</label>
-        <input type="number" class="form-control" id="product-price" name="product-price" step="0.01" placeholder="Enter product price">
+        <input type="number" class="form-control" id="product-price" name="Price" step="0.01" placeholder="Enter product price">
     </div>
     <button type="submit" class="btn btn-primary">Create Product</button>
-</form>
+}
