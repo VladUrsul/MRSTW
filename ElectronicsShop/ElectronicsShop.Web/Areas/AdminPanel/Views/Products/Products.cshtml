@@ -10,29 +10,82 @@
     <div class="alert alert-success">@TempData["SuccessMessage"]</div>
 }
 
-@using (Html.BeginForm("Create", "Products", FormMethod.Post))
-{
-    <div class="form-group">
-        <label for="category">Category:</label>
-        <select class="form-control" id="category" name="CategoryId">
-            <option value="">-- Select a category --</option>
-            @foreach (var category in Model.Categories)
+<div class="row">
+    <div class="col-md-6">
+        <div class="create-product-box">
+            <h1>Add Products</h1>
+            @using (Html.BeginForm("Create", "Products", FormMethod.Post))
             {
-                <option value="@category.Id">@category.Name</option>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category" name="CategoryId">
+                        <option value="">-- Select a category --</option>
+                        @foreach (var category in Model.Categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" class="form-control" id="product-name" name="Name" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="product-description">Product Description:</label>
+                    <textarea class="form-control" id="product-description" name="Description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Product Price:</label>
+                    <input type="number" class="form-control" id="product-price" name="Price" step="0.01" placeholder="Enter product price">
+                </div>
+                <button type="submit" class="btn btn-primary">Create Product</button>
             }
-        </select>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="product-name">Product Name:</label>
-        <input type="text" class="form-control" id="product-name" name="Name" placeholder="Enter product name">
+    <div class="col-md-6">
+        <div class="product-list-box">
+            <h1>Products List</h1>
+            <table id="myTable" class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in ViewBag.Products)
+                    {
+                        <tr>
+                            <td>@product.Id</td>
+                            <td>@product.Name</td>
+                            <td>@product.Description</td>
+                            <td>@product.Price</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="product-description">Product Description:</label>
-        <textarea class="form-control" id="product-description" name="Description" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="product-price">Product Price:</label>
-        <input type="number" class="form-control" id="product-price" name="Price" step="0.01" placeholder="Enter product price">
-    </div>
-    <button type="submit" class="btn btn-primary">Create Product</button>
-}
+</div>
+
+
+<style>
+    .row {
+        background-color: #F5F5F5; /* Set the background color of the row */
+        padding: 20px;
+    }
+
+    .create-product-box {
+        background-color: #FFFFFF; /* Set the background color of the left box */
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .product-list-box {
+        background-color: #FFFFFF; /* Set the background color of the right box */
+        border-radius: 10px;
+        padding: 20px;
+    }
+</style>

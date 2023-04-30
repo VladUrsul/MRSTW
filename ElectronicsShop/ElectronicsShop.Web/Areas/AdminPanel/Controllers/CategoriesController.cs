@@ -18,6 +18,8 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
         // GET: /AdminPanel/Categories
         public ActionResult Categories()
         {
+            var categories = _dbContext.Categories.ToList();
+            ViewBag.Categories = categories;
             return View("~/Areas/AdminPanel/Views/Categories/Categories.cshtml");
         }
 

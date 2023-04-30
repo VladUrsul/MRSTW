@@ -22,6 +22,9 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
         public ActionResult Products()
         {
             var categories = _dbContext.Categories.ToList();
+            var products = _dbContext.Products.ToList();
+            ViewBag.Products = products;
+
             var viewModel = new ProductViewModel
             {
                 Categories = categories
@@ -56,6 +59,7 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
 
             // If we got this far, something failed, redisplay form
             viewModel.Categories = _dbContext.Categories.ToList();
+            viewModel.Products = _dbContext.Products.ToList();
             return View("~/Areas/AdminPanel/Views/Products/Products.cshtml", viewModel);
         }
 
