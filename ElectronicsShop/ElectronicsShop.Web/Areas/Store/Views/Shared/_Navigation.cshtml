@@ -1,4 +1,11 @@
-﻿<style>
+﻿@using ElectronicsShop.BusinessLogic.Services
+
+@{
+    var currentUserService = (ICurrentUserService)HttpContext.Current.Application["ICurrentUserService"];
+    var currentUserName = currentUserService.GetCurrentUserName();
+}
+
+<style>
     .navbar.default-layout-navbar {
         max-width: 1300px;
         margin: 0 auto;
@@ -10,6 +17,11 @@
 
     .navbar-brand-wrapper {
         background-color: transparent;
+    }
+
+    .current-user {
+        margin-left: 250px;
+        margin-top: 23px;
     }
 
     body {
@@ -48,6 +60,17 @@
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
             <a class="navbar-brand brand-logo" href="index.html"><img src="/Content/images/logo.svg" alt="logo" style="margin-left: 70px"></a>
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/Content/images/logo-mini.svg" alt="logo" style="margin-left: 70px"></a>
+        </div>
+
+        <div class="current-user">
+            @if (currentUserName != null)
+            {
+                @currentUserName
+            }
+            else
+            {
+                <p>Not logged in</p>
+            }
         </div>
 
         <ul class="navbar-nav navbar-nav-right">

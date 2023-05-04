@@ -1,13 +1,11 @@
 ﻿@using ElectronicsShop.Data.Repositories;
 @using ElectronicsShop.Domain.Entities;
 @using ElectronicsShop.Data.Contexts
-
+@using ElectronicsShop.BusinessLogic.Services
 
 @{
-    var userRepository = new UserRepository(new ShopDbContext());
-    var userId = (int)Session["UserId"];
-    var currentUser = userRepository.GetUserById(userId);
-    var currentUserName = currentUser.UserName;
+    var currentUserService = (ICurrentUserService)HttpContext.Current.Application["ICurrentUserService"];
+    var currentUserName = currentUserService.GetCurrentUserName();
 }
 
 
@@ -39,10 +37,15 @@
                     </div>
                     <div class="nav-profile-text">
                         <div class="nav-profile-text">
-                            <p class="mb-1 text-black">@currentUserName</p>
+                            @if (currentUserName != null)
+                            {
+                                <p class="mb-1 text-black">@currentUserName</p>
+                            }
+                            else
+                            {
+                                <p class="mb-1 text-black">Not logged in</p>
+                            }
                         </div>
-
-
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -114,8 +117,8 @@
                 </div>
             </li>
             <li class="nav-item nav-settings d-none d-lg-block">
-                <a class="nav-link" href="#">
-                    <i class="mdi mdi-format-line-spacing"></i>
+                <a class="nav-link" href="@Url.Action("Index", "Home", new { area = "Store", returnUrl = Request.Path })">
+                    <i class="mdi mdi-shopping"></i>
                 </a>
             </li>
             <li class="nav-item nav-logout d-none d-lg-block">

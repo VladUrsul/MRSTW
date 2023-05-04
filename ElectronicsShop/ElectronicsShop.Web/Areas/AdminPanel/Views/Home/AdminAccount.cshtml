@@ -1,6 +1,7 @@
 ﻿@using ElectronicsShop.Data.Repositories;
 @using ElectronicsShop.Domain.Entities;
 @using ElectronicsShop.Data.Contexts
+@using ElectronicsShop.BusinessLogic.Services
 
 
 @{
@@ -9,10 +10,8 @@
 }
 
 @{
-    var userRepository = new UserRepository(new ShopDbContext());
-    var userId = (int)Session["UserId"];
-    var currentUser = userRepository.GetUserById(userId);
-    var currentUserName = currentUser.UserName;
+    var currentUserService = (ICurrentUserService)HttpContext.Current.Application["ICurrentUserService"];
+    var currentUserName = currentUserService.GetCurrentUserName();
 }
 
 <div class="content-wrapper">
