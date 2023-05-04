@@ -12,8 +12,12 @@ namespace ElectronicsShop.Domain.Entities
 
         public string Name { get; set; }
 
-        public string Brand { get; set; }
-
         public string Description { get; set; }
+
+        public decimal Price { get; set; }
+
+        // reference to the Category entity
+        public int CategoryId { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
