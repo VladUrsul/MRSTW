@@ -17,6 +17,8 @@ using Unity.Injection;
 using ElectronicsShop.Domain.Entities;
 using Microsoft.Ajax.Utilities;
 using System.Configuration;
+using ElectronicsShop.BusinessLogic.Services;
+using System.Security.Principal;
 
 namespace ElectronicsShop.Web
 {
@@ -45,8 +47,13 @@ namespace ElectronicsShop.Web
             // Register the UserRepository with the DI container, with the ShopDbContext dependency injected
             container.RegisterType<UserRepository>(new InjectionConstructor(typeof(ShopDbContext)));
 
+            var userRepository = new UserRepository(new ShopDbContext());
+            var currentUserService = new CurrentUserService(userRepository);
+            HttpContext.Current.Application["ICurrentUserService"] = currentUserService;
+
             // Set the MVC dependency resolver to use Unity
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
+
 
             ViewEngines.Engines.Clear();
             ViewEngines.Engines.Add(new RazorViewEngine

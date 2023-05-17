@@ -393,6 +393,8 @@
     <Compile Include="Areas\AdminPanel\Controllers\OrdersController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\ProductsController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\UsersController.cs" />
+    <Compile Include="Areas\AdminPanel\Models\CategoryViewModel.cs" />
+    <Compile Include="Areas\AdminPanel\Models\ProductViewModel.cs" />
     <Compile Include="Areas\Store\Controllers\HomeController.cs" />
     <Compile Include="Areas\Store\Controllers\ProductsController.cs" />
     <Compile Include="Areas\Store\StoreAreaRegistration.cs" />

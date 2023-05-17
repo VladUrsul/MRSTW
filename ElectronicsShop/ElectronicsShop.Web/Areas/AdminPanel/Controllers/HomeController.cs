@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ElectronicsShop.Data.Contexts;
+using ElectronicsShop.Data.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

@@ -34,17 +34,6 @@
                                 @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-lg border-left-0", placeholder = "Password" })
                                 @Html.ValidationMessageFor(m => m.Password)
                             </div>
-                            @*
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <label class="form-check-label text-muted">
-                                        @Html.CheckBoxFor(m => m.AgreeToTerms)
-                                        I agree to all Terms &amp; Conditions
-                                    </label>
-                                </div>
-                                @Html.ValidationMessageFor(m => m.AgreeToTerms)
-                            </div>
-                                *@
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-block btn-gradient-info btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
                             </div>
@@ -59,7 +48,5 @@
                 </div>
             </div>
         </div>
-        <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
 </div>

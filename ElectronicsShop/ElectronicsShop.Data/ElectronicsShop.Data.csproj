@@ -53,17 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\ShopDbContext.cs" />
-    <Compile Include="Migrations\202304202326590_First.cs" />
-    <Compile Include="Migrations\202304202326590_First.designer.cs">
-      <DependentUpon>202304202326590_First.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304211638310_Second.cs" />
-    <Compile Include="Migrations\202304211638310_Second.designer.cs">
-      <DependentUpon>202304211638310_Second.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202304211647350_Third.cs" />
-    <Compile Include="Migrations\202304211647350_Third.designer.cs">
-      <DependentUpon>202304211647350_Third.cs</DependentUpon>
+    <Compile Include="Migrations\202305111258455_first.cs" />
+    <Compile Include="Migrations\202305111258455_first.designer.cs">
+      <DependentUpon>202305111258455_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,14 +79,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202304202326590_First.resx">
-      <DependentUpon>202304202326590_First.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304211638310_Second.resx">
-      <DependentUpon>202304211638310_Second.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202304211647350_Third.resx">
-      <DependentUpon>202304211647350_Third.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202305111258455_first.resx">
+      <DependentUpon>202305111258455_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
