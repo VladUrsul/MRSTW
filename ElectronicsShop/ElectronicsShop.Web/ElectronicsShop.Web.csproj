@@ -281,6 +281,8 @@
     <Content Include="Areas\AdminPanel\Views\Categories\Categories.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Products\Products.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Users\Users.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowser.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdView\ProdView.cshtml" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.min.js" />
@@ -391,7 +393,9 @@
     <Compile Include="Areas\AdminPanel\Controllers\HomeController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\InvoiceController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\OrdersController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ProdBrowserController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\AdminPanel\Controllers\ProdViewController.cs" />
     <Compile Include="Areas\AdminPanel\Controllers\UsersController.cs" />
     <Compile Include="Areas\AdminPanel\Models\CategoryViewModel.cs" />
     <Compile Include="Areas\AdminPanel\Models\ProductViewModel.cs" />
