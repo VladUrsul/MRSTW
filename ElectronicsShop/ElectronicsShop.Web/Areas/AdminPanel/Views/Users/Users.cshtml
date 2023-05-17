@@ -31,7 +31,13 @@
                             <td>@user.Id</td>
                             <td>@user.UserName</td>
                             <td>@user.Email</td>
-                            <td>@user.Role</td>
+                            <td>
+                                <select>
+                                    <option value="user">User</option>
+                                    <option value="moderator">Moderator</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </td>
                         </tr>
                     }
                 </tbody>
@@ -40,6 +46,7 @@
     </div>
 </body>
 </html>
+
 
 <style>
     .row {
