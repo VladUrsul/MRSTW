@@ -281,8 +281,11 @@
     <Content Include="Areas\AdminPanel\Views\Categories\Categories.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Products\Products.cshtml" />
     <Content Include="Areas\AdminPanel\Views\Users\Users.cshtml" />
-    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowser.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowserLaptops.cshtml" />
     <Content Include="Areas\AdminPanel\Views\ProdView\ProdView.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowserDesktops.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowserPhones.cshtml" />
+    <Content Include="Areas\AdminPanel\Views\ProdBrowser\ProdBrowserOthers.cshtml" />
     <None Include="Scripts\jquery-3.6.4.intellisense.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.js" />
     <Content Include="Scripts\jquery-ui-1.13.2.min.js" />

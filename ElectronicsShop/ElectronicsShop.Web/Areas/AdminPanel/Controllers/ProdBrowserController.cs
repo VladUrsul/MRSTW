@@ -8,9 +8,21 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
 {
     public class ProdBrowserController : Controller
     {
-        public ActionResult ProdBrowser()
+        public ActionResult ProdBrowserLaptops()
         {
-            return View("~/Areas/AdminPanel/Views/ProdBrowser/ProdBrowser.cshtml");
+            return View("~/Areas/AdminPanel/Views/ProdBrowser/ProdBrowserLaptops.cshtml");
+        }
+        public ActionResult ProdBrowserDesktops()
+        {
+            return View("~/Areas/AdminPanel/Views/ProdBrowser/ProdBrowserDesktops.cshtml");
+        }
+        public ActionResult ProdBrowserPhones()
+        {
+            return View("~/Areas/AdminPanel/Views/ProdBrowser/ProdBrowserPhones.cshtml");
+        }
+        public ActionResult ProdBrowserOthers()
+        {
+            return View("~/Areas/AdminPanel/Views/ProdBrowser/ProdBrowserOthers.cshtml");
         }
     }
 }
