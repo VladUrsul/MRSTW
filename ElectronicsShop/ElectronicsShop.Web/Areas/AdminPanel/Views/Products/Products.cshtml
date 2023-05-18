@@ -4,12 +4,13 @@
     ViewBag.Title = "Products";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<head><link rel="stylesheet" href="path-to/node_modules/dropify/dist/css/dropify.min.css"></head>
 @if (TempData["SuccessMessage"] != null)
 {
     <div class="alert alert-success">@TempData["SuccessMessage"]</div>
 }
 
+<body>
 <div class="row">
     <div class="col-md-6">
         <div class="create-product-box">
@@ -38,6 +39,12 @@
                     <label for="product-price">Product Price:</label>
                     <input type="number" class="form-control" id="product-price" name="Price" step="0.01" placeholder="Enter product price">
                 </div>
+                <script src="path-to/node_modules/dropify/dist/js/dropify.min.js"></script>
+                <input type="file" class="dropify" />
+                
+                <script>
+                    $('.dropify').dropify();
+                </script>
                 <button type="submit" class="btn btn-primary">Create Product</button>
             }
         </div>
@@ -69,6 +76,7 @@
         </div>
     </div>
 </div>
+</body>
 
 
 <style>
