@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/Content/vendors/mdi/css/materialdesignicons.min.css" ">
+    <link rel="stylesheet" href="~/Content/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico">
+</head>
+
+<html>
+
+<ul class="nav nav-pills nav-pills-success">
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("ProdBrowserLaptops", "ProdBrowser")">Laptops</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("ProdBrowserDesktops", "ProdBrowser")">Desktops</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("ProdBrowserPhones", "ProdBrowser")">Phones</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Accesories</a>
+    </li>
+</ul>
+<div class="card">
+    <div class="card-body">
+        <div class="product-nav-wrapper row">
+        </div>
+        <div class="row product-item-wrapper">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 product-item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="product-img-outer">
+                            <a href="*">
+                                <img class="product_image" src="https://darwin.md/images/product/thumbs/2022/10/darwin-robot-aspirator-roborock-s6-maxv-black-039.webp" alt="prduct image">
+                            </a>
+                        </div>
+                        <a href="*">
+                            <p class="product-title">Acc1</p>
+                        </a>
+                        <p class="product-price">$399.00</p>
+                        <p class="product-description"> description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 product-item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="product-img-outer">
+                            <a href="*">
+                                <img class="product_image" src="https://darwin.md/images/product/thumbs/2022/11/darwin-ceas-inteligent-huawei-watch-gt-3-jupiter-b19s-black-046.webp" alt="prduct image">
+                            </a>
+                        </div>
+                        <a href="*">
+                            <p class="product-title">Acc2</p>
+                        </a>
+                        <p class="product-price">$799.00</p>
+                        <p class="product-description">description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 product-item">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="product-img-outer">
+                            <a href="*">
+                                <img class="product_image" src="https://darwin.md/images/product/thumbs/2023/01/darwin-ochelari-vr-oculus-quest-2-128-gb-white-072.webp" alt="prduct image">
+                            </a>
+                        </div>
+                        <a href="*">
+                            <p class="product-title">Acc3</p>
+                        </a>
+                        <p class="product-price">$199.00</p>
+                        <p class="product-description">description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .product_image {
+        width: 200px;
+        height: auto;
+    }
+
+    .product-title {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .nav-pills .nav-link {
+        background: linear-gradient(to right, rgba(163, 10, 236, 0.3), rgba(0, 0, 0, 0.1));
+        color: rgba(0, 0, 0, 0.8);
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+        .nav-pills .nav-link:hover {
+            background: rgba(163, 10, 236, 0.6);
+            color: white;
+        }
+
+        .nav-pills .nav-link.active {
+            background: rgba(163, 10, 236, 0.9);
+            color: white;
+        }
+
+    .nav-pills .nav-item {
+        margin-right: 5px;
+    }
+</style>
+<script src="../../../assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="../../../assets/js/off-canvas.js"></script>
+<script src="../../../assets/js/misc.js"></script>
+<script src="../../../assets/js/jquery.cookie.js"></script>
+</html>
