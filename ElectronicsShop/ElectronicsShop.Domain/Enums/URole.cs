@@ -9,6 +9,7 @@ namespace ElectronicsShop.Domain.Enums
     public enum URole
     {
         User,
-        Admin
+        Admin,
+        Visitor
     }
 }

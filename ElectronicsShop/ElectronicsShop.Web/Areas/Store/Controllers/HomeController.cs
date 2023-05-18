@@ -6,6 +6,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ElectronicsShop.Data;
+using ElectronicsShop.Web.Areas.AdminPanel.Models;
+using System.Web.Configuration;
+using ElectronicsShop.Data.Contexts;
+
 
 namespace ElectronicsShop.Web.Areas.Store.Controllers
 {

@@ -38,6 +38,7 @@ namespace ElectronicsShop.Data.Repositories
                 throw new DbEntityValidationException(exceptionMessage, ex.EntityValidationErrors);
             }
         }
+        
         public User GetUserByUsername(string username)
         {
             return _dbContext.Users.SingleOrDefault(u => u.UserName == username);
@@ -52,5 +53,6 @@ namespace ElectronicsShop.Data.Repositories
         {
             return _dbContext.Users.ToList();
         }
+        
     }
 }

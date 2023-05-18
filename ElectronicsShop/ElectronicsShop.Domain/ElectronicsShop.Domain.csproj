@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Permission.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Enums\URole.cs" />

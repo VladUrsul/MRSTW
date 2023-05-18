@@ -3,9 +3,11 @@ using System.Linq;
 using System.Web.Mvc;
 using ElectronicsShop.Data.Contexts;
 using ElectronicsShop.Web.Areas.AdminPanel.Models;
+using ElectronicsShop.Web.Areas.AdminPanel.Filters;
 
 namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
 {
+    //[AdminAccess]
     public class CategoriesController : Controller
     {
         private readonly ShopDbContext _dbContext;

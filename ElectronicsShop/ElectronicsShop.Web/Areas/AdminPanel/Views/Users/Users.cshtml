@@ -5,7 +5,7 @@
 }
 
 @model List<ElectronicsShop.Domain.Entities.User>
-
+@using ElectronicsShop.Domain.Enums
 
 <html>
 <head>
@@ -31,16 +31,19 @@
                             <td>@user.Id</td>
                             <td>@user.UserName</td>
                             <td>@user.Email</td>
+
                             <td>
                                 <select>
-                                    <option value="user">User</option>
-                                    <option value="moderator">Moderator</option>
-                                    <option value="admin">Admin</option>
+                                    <option value="user" @(user.Role == URole.User ? "selected" : "")>User</option>
+                                    <option value="moderator" @(user.Role == URole.Admin ? "selected" : "")>Admin</option>
+                                    <option value="admin" @(user.Role == URole.Visitor ? "selected" : "")>Visitor</option>
                                 </select>
                             </td>
+
                         </tr>
                     }
                 </tbody>
+
             </table>
         </div>
     </div>

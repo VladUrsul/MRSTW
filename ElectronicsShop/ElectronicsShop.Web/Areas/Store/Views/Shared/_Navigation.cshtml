@@ -1,5 +1,6 @@
 ﻿@using ElectronicsShop.BusinessLogic.Services
 
+
 @{
     var currentUserService = (ICurrentUserService)HttpContext.Current.Application["ICurrentUserService"];
     var currentUserName = currentUserService.GetCurrentUserName();
@@ -39,9 +40,6 @@
                     <i class="mdi mdi-menu"></i> Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button" data-category="Phones">Phones</button></li>
-                    <li><button class="dropdown-item" type="button" data-category="Laptops">Laptops</button></li>
-                    <li><button class="dropdown-item" type="button" data-category="Accessories">Accessories</button></li>
                 </ul>
             </li>
         </ul>

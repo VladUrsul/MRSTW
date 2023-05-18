@@ -57,6 +57,38 @@
     <Compile Include="Migrations\202305111258455_first.designer.cs">
       <DependentUpon>202305111258455_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202305181010499_second.cs" />
+    <Compile Include="Migrations\202305181010499_second.designer.cs">
+      <DependentUpon>202305181010499_second.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181124529_third.cs" />
+    <Compile Include="Migrations\202305181124529_third.designer.cs">
+      <DependentUpon>202305181124529_third.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181132172_fourth.cs" />
+    <Compile Include="Migrations\202305181132172_fourth.designer.cs">
+      <DependentUpon>202305181132172_fourth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181218241_fifth.cs" />
+    <Compile Include="Migrations\202305181218241_fifth.designer.cs">
+      <DependentUpon>202305181218241_fifth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181240592_sixth.cs" />
+    <Compile Include="Migrations\202305181240592_sixth.designer.cs">
+      <DependentUpon>202305181240592_sixth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181250358_eight.cs" />
+    <Compile Include="Migrations\202305181250358_eight.designer.cs">
+      <DependentUpon>202305181250358_eight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181259099_nineth.cs" />
+    <Compile Include="Migrations\202305181259099_nineth.designer.cs">
+      <DependentUpon>202305181259099_nineth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305181315097_tenth.cs" />
+    <Compile Include="Migrations\202305181315097_tenth.designer.cs">
+      <DependentUpon>202305181315097_tenth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -81,6 +113,30 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305111258455_first.resx">
       <DependentUpon>202305111258455_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181010499_second.resx">
+      <DependentUpon>202305181010499_second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181124529_third.resx">
+      <DependentUpon>202305181124529_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181132172_fourth.resx">
+      <DependentUpon>202305181132172_fourth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181218241_fifth.resx">
+      <DependentUpon>202305181218241_fifth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181240592_sixth.resx">
+      <DependentUpon>202305181240592_sixth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181250358_eight.resx">
+      <DependentUpon>202305181250358_eight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181259099_nineth.resx">
+      <DependentUpon>202305181259099_nineth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305181315097_tenth.resx">
+      <DependentUpon>202305181315097_tenth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
