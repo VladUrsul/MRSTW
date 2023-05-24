@@ -26,6 +26,23 @@ namespace ElectronicsShop.Web
                 defaults: new { controller = "Categories", action = "Index", id = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+               name: "Invoice",
+               url: "Invoice/{action}/{id}",
+               defaults: new { controller = "Invoice", action = "Invoice", id = UrlParameter.Optional }
+           );
+
+            routes.MapRoute(
+              name: "Orders",
+              url: "Orders/{action}/{id}",
+              defaults: new { controller = "Orders", action = "Orders", id = UrlParameter.Optional }
+          );
+
+            routes.MapRoute(
+              name: "Login",
+              url: "StoreLogin/{action}/{id}",
+              defaults: new { controller = "StoreLogin", action = "StoreLogin", id = UrlParameter.Optional }
+          );
         }
     }
 }

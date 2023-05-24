@@ -385,6 +385,7 @@
     <Content Include="Content\all.css" />
     <Content Include="Content\images\faces\Bogdan.JPG" />
     <Content Include="Content\images\logo_website.png" />
+    <Content Include="Views\Account\StoreLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -571,5 +572,5 @@
   </Target>
   -->
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v17.0\WebApplications\Microsoft.WebApplication.targets" />
+ 
 </Project>

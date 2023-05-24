@@ -4,55 +4,121 @@
 }
 
 <div class="content-wrapper">
-    <h1>Welcome to dashboard</h1>
-    <div class="col-lg-6 grid-margin stretch-card">
+    <div class="page-header">
+        <h3 class="page-title">
+            <span class="page-title-icon bg-gradient-primary text-white me-2">
+                <i class="mdi mdi-home"></i>
+            </span> Dashboard
+        </h3>
+        <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span></span>Overview <i class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"></i>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 grid-margin">
+            <div class="card bg-gradient-danger text-white">
+                <div class="card-body">
+                    <div class="grey-circle-profile-icon">
+                        <i class="mdi mdi-account-outline"></i>
+                    </div>
+                    <h2 class="mb-0 mt-3">183,954</h2>
+                    <h5 class="font-weight-normal mb-3">Customers</h5>
+                    <p class="text-medium m-0">Decreased by 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 grid-margin">
+            <div class="card bg-gradient-success text-white">
+                <div class="card-body">
+                    <div class="grey-circle-profile-icon">
+                        <i class="mdi mdi-tshirt-crew-outline"></i>
+                    </div>
+                    <h2 class="mb-0 mt-3">$4,986</h2>
+                    <h5 class="font-weight-normal mb-3">Total orders</h5>
+                    <p class="text-medium m-0">Decreased by 10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 grid-margin">
+            <div class="card bg-gradient-primary text-white">
+                <div class="card-body">
+                    <div class="grey-circle-profile-icon">
+                        <i class="mdi mdi-flask"></i>
+                    </div>
+                    <h2 class="mb-0 mt-3">$35,465</h2>
+                    <h5 class="font-weight-normal mb-3">Total sales</h5>
+                    <p class="text-medium m-0">Increased by 5%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 grid-margin">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Orders</h4>
-                <p class="card-description">
-                </p>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Product</th>
-                            <th>Sale</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jacob</td>
-                            <td>Photoshop</td>
-                            <td class="text-danger"> 28.76% <i class="mdi mdi-arrow-down"></i></td>
-                            <td><label class="badge badge-danger">Pending</label></td>
-                        </tr>
-                        <tr>
-                            <td>Messsy</td>
-                            <td>Flash</td>
-                            <td class="text-danger"> 21.06% <i class="mdi mdi-arrow-down"></i></td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                            <td>John</td>
-                            <td>Premier</td>
-                            <td class="text-danger"> 35.00% <i class="mdi mdi-arrow-down"></i></td>
-                            <td><label class="badge badge-info">Fixed</label></td>
-                        </tr>
-                        <tr>
-                            <td>Peter</td>
-                            <td>After effects</td>
-                            <td class="text-success"> 82.00% <i class="mdi mdi-arrow-up"></i></td>
-                            <td><label class="badge badge-success">Completed</label></td>
-                        </tr>
-                        <tr>
-                            <td>Dave</td>
-                            <td>53275535</td>
-                            <td class="text-success"> 98.05% <i class="mdi mdi-arrow-up"></i></td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h4 class="card-title">Recent Tickets</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> Assignee </th>
+                                <th> Subject </th>
+                                <th> Status </th>
+                                <th> Last Update </th>
+                                <th> Tracking ID </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../Content/images/faces/face1.jpg" class="me-2" alt="image"> David Grey
+                                </td>
+                                <td> Fund is not recieved </td>
+                                <td>
+                                    <label class="badge badge-gradient-success">DONE</label>
+                                </td>
+                                <td> Dec 5, 2017 </td>
+                                <td> WD-12345 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../Content/images/faces/face2.jpg" class="me-2" alt="image"> Stella Johnson
+                                </td>
+                                <td> High loading time </td>
+                                <td>
+                                    <label class="badge badge-gradient-warning">PROGRESS</label>
+                                </td>
+                                <td> Dec 12, 2017 </td>
+                                <td> WD-12346 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../Content/images/faces/face3.jpg" class="me-2" alt="image"> Marina Michel
+                                </td>
+                                <td> Website down for one week </td>
+                                <td>
+                                    <label class="badge badge-gradient-info">ON HOLD</label>
+                                </td>
+                                <td> Dec 16, 2017 </td>
+                                <td> WD-12347 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../Content/images/faces/face4.jpg" class="me-2" alt="image"> John Doe
+                                </td>
+                                <td> Loosing control on server </td>
+                                <td>
+                                    <label class="badge badge-gradient-danger">REJECTED</label>
+                                </td>
+                                <td> Dec 3, 2017 </td>
+                                <td> WD-12348 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

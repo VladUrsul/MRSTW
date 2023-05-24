@@ -56,8 +56,8 @@
         </div>
 
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="/Content/images/logo.svg" alt="logo" style="margin-left: 70px"></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/Content/images/logo-mini.svg" alt="logo" style="margin-left: 70px"></a>
+            <a class="navbar-brand brand-logo" href="@Url.Action("Index", "Home", new { area = "Store", returnUrl = Request.Path })"><img src="/Content/images/logo.svg" alt="logo" style="margin-left: 70px"></a>
+            <a class="navbar-brand brand-logo-mini" href="@Url.Action("Index", "Home", new { area = "Store", returnUrl = Request.Path })"><img src="/Content/images/logo-mini.svg" alt="logo" style="margin-left: 70px"></a>
         </div>
 
         <div class="current-user">
@@ -70,8 +70,13 @@
                 <p>Not logged in</p>
             }
         </div>
-
+        
         <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item d-none d-lg-block full-screen-link">
+                <a class="nav-link">
+                    <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                </a>
+            </li>
             <li class="nav-item dropdown flex-shrink-0">
                 <a class="nav-link count-indicator dropdown-toggle">
                     <i class="mdi mdi-cart-outline"></i>
