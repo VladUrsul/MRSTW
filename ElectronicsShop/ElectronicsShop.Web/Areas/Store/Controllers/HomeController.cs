@@ -29,5 +29,11 @@ namespace ElectronicsShop.Web.Areas.Store.Controllers
             // Load the partial view with products for the specified category
             return PartialView("~/Areas/Store/Views/Shared/_ProductGrid.cshtml");
         }
+
+        public ActionResult StoreLogin()
+        {
+        
+            return View("~/Views/Account/StoreLogin.cshtml");
+        }
     }
 }
