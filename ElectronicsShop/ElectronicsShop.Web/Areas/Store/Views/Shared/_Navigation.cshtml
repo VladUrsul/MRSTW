@@ -8,13 +8,12 @@
 
 <style>
     .navbar.default-layout-navbar {
-        max-width: 1700px;
+        max-width: 1300px;
         margin: 0 auto;
         border-radius: 20px;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         background-color: #ffffff;
-        
     }
 
     .navbar-brand-wrapper {
@@ -38,7 +37,7 @@
         <ul class="navbar-nav flex-shrink-0" style="margin-left: 0px">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="mdi mdi-menu"></i>  Categories
+                    <i class="mdi mdi-menu"></i> Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                 </ul>
@@ -71,12 +70,8 @@
                 <p>Not logged in</p>
             }
         </div>
+        
         <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown flex-shrink-0" style="margin-right: 0px">
-                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="@Url.Action("Signup", "Account", new { area = "", returnUrl = Request.Path })">
-                    <i class="mdi mdi-login-variant"></i>
-                </a>
-            </li>
             <li class="nav-item d-none d-lg-block full-screen-link">
                 <a class="nav-link">
                     <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
@@ -88,7 +83,11 @@
                     <span class="count-symbol bg-warning"></span>
                 </a>
             </li>
-
+            <li class="nav-item dropdown flex-shrink-0" style="margin-right: 0px">
+                <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="@Url.Action("Signup", "Account", new { area = "", returnUrl = Request.Path })">
+                    <i class="mdi mdi-login-variant"></i>
+                </a>
+            </li>
 
         </ul>
 

@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Login";
-   
+    Layout = "~/Views/Account/_Layout.cshtml";
 }
 @model ElectronicsShop.Web.Models.LoginViewModel
 
@@ -12,9 +12,9 @@
                 <div class="col-lg-6 d-flex align-items-center justify-content-center">
                     <div class="auth-form-transparent text-left p-3">
                         <div class="brand-logo">
-                            <img src="../Content/images/logo.svg" alt="logo">
+                            <img src="/Content/images/logo.svg" alt="logo">
                         </div>
-                        <h1>Welcome back!</h1>
+                        <h4>Welcome back!</h4>
                         <h6 class="font-weight-light">Happy to see you again!</h6>
                         @using (Html.BeginForm("Login", "Account", FormMethod.Post))
                         {
