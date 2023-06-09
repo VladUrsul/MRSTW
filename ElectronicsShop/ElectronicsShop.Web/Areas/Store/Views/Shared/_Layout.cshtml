@@ -22,14 +22,15 @@
 
         <!-- Page Body -->
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-lg-12">
                     @if (ViewBag.ShowCategoriesView == true)
                     {
                         @Html.Partial("~/Areas/Store/Views/Shared/_ProductGrid.cshtml");
                     }
-                    @RenderBody();
+                    <main role="main" class="pb-5 mb-0">
+                        @RenderBody()
+                    </main>
                 </div>
             </div>
         </div>
