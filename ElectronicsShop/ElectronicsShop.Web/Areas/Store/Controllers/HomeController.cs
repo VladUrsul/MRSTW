@@ -60,13 +60,5 @@ namespace ElectronicsShop.Web.Areas.Store.Controllers
             return PartialView("~/Areas/Store/Views/Shared/_ProductGrid.cshtml", viewModel);
         }
 
-<<<<<<< HEAD
-=======
-        public ActionResult StoreLogin()
-        {
-        
-            return View("~/Views/Account/StoreLogin.cshtml");
-        }
->>>>>>> 4c2676d4e3ff70ee0ebf5fb6cf7cb0b7e91275ec
     }
 }
