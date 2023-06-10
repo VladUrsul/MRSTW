@@ -16,6 +16,4 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Models
         public decimal Price { get; set; }
 
     }
-
-
 }

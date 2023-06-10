@@ -1,4 +1,14 @@
-﻿<style>
+﻿@{
+    ViewBag.Title = "Electronics Shop";
+    Layout = "~/Areas/Store/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    string categoryName = ViewBag.SelectedCategoryName;
+}
+
+<style>
     .content-wrapper {
         max-width: 1300px;
         margin: 0 auto;
@@ -6,189 +16,48 @@
         border-radius: 10px;
         background-color: #ffffff;
     }
-    
+
     .product-item {
         width: calc(1300px / 4 - 50px);
-        height: 400px;
+        height: auto;
         margin-bottom: 10px;
         background-color: #f2f2f2;
         border-radius: 10px;
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-</style>
 
-<div class="content-wrapper" style="margin-top: 60px">
-    <div class="container mt-4">
-        <div class="row mb-4 products-row justify-content-center">
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <a href="#">View Product</a>
-                </div>
+        .product-item img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+</style>
+<div id="productGridContainer">
+    <div class="content-wrapper" style="margin-top: 60px">
+
+        <h2>Selected Category: @ViewBag.SelectedCategoryName</h2>
+
+        <div class="container mt-4">
+            <div class="row mb-4 products-row justify-content-center">
+                @foreach (var product in ViewBag.Products)
+                {
+                    <div class="col-md-3">
+                        <div class="product-item">
+                            <img src="https://darwin.md/images/product/thumbs/2022/11/laptop-apple-macbook-air-13-2020-mgn63ru-a-rus-space-gray-026.webp" alt="@product.Name">
+                            <h2>@product.Name</h2>
+                            <p>@product.Description</p>
+                            <a href="#">View Product</a>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-        <div class="row mb-4 products-row justify-content-center">
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-4 products-row justify-content-center">
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-4 products-row justify-content-center">
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-4 products-row justify-content-center">
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h2>Product 1</h2>
-                    <p>Description of Product 1</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h2>Product 2</h2>
-                    <p>Description of Product 2</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product3.jpg" alt="Product 3">
-                    <h2>Product 3</h2>
-                    <p>Description of Product 3</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="product-item">
-                    <img src="product4.jpg" alt="Product 4">
-                    <h2>Product 4</h2>
-                    <p>Description of Product 4</p>
-                    <a href="#">View Product</a>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>

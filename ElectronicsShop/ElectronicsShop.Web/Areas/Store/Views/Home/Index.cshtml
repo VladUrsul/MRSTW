@@ -12,8 +12,273 @@
         border-radius: 10px;
         background-color: #ffffff;
     }
+    .banner {
+        background-color: #002366;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    .banner-text {
+        text-align: center;
+        color: white;
+    }
+
+        .banner-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+            color: white;
+        }
+    .category-icon {
+        /* Add your category icon styles here */
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+    }
+
+    .category-container {
+        display: flex;
+        justify-content: space-around; /* Adjust the alignment as needed */
+        align-items: center;
+        margin-top: 20px; /* Add some spacing */
+    }
+
+    /* Adjust the width and margin of each category card */
+    .category-card {
+        width: 128px;
+        margin: 0 10px; /* Adjust the spacing between the cards */
+    }
 </style>
 
 <div class="content-wrapper" style="margin-top: 60px">
-    
+
+    <header>
+        <div class="banner">
+            <div class="banner-text">
+                <h1>Welcome to our Electronic Online Store</h1>
+            </div>
+        </div>
+    </header>
+
+    <section id="category-icons">
+        <h2 class="section-heading">CATEGORIES</h2>
+        <div class="category-container">
+            <div class="category-card">
+                <a href="category1.html" class="category-link">
+                    <img src="https://darwin.md/images/collection/Asset-189-220531045839-darwin.png" alt="Category 1" class="category-icon">
+                    <h3>Category 1</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <a href="category2.html" class="category-link">
+                    <img src="https://darwin.md/images/collection/Asset-190-220531045709-darwin.png" alt="Category 2" class="category-icon">
+                    <h3>Category 2</h3>
+                </a>
+            </div>
+            <div class="category-card">
+                <a href="category3.html" class="category-link">
+                    <img src="https://darwin.md/images/collection/Asset-192-220531045924-darwin.png" alt="Category 3" class="category-icon">
+                    <h3>Category 3</h3>
+                </a>
+            </div>
+            <!-- Add more category cards as needed -->
+        </div>
+    </section>
+
+    <section id="new-products">
+        <h2 class="section-heading">NEW PRODUCTS</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2022/11/laptop-apple-macbook-air-13-2020-mgn63ru-a-rus-space-gray-026.webp" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>$99.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2023/02/darwin-laptop-asus-rog-strix-scar-17-g733zw-off-black-207702.webp" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>$149.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2023/02/darwin-laptop-asus-rog-strix-scar-17-g733zw-off-black-207702.webp" alt="Product 2">
+                <h3>Product 3</h3>
+                <p>$149.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2023/02/darwin-laptop-asus-rog-strix-scar-17-g733zw-off-black-207702.webp" alt="Product 2">
+                <h3>Product 4</h3>
+                <p>$149.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sale">
+        <h2 class="section-heading">SALE</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2023/03/darwin-apple-iphone-14-plus-6-gb-512-gb-yellow-214340.webp" alt="Product 3">
+                <h3>Product 1</h3>
+                <p>$79.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2022/09/darwin-apple-iphone-14-pro-6-gb-128-gb-dual-sim-space-black-049.webp" alt="Product 4">
+                <h3>Product 2</h3>
+                <p>$199.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2022/09/darwin-apple-iphone-14-pro-6-gb-128-gb-dual-sim-space-black-049.webp" alt="Product 4">
+                <h3>Product 3</h3>
+                <p>$199.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://darwin.md/images/product/thumbs/2022/09/darwin-apple-iphone-14-pro-6-gb-128-gb-dual-sim-space-black-049.webp" alt="Product 4">
+                <h3>Product 4</h3>
+                <p>$199.99</p>
+                <button class="buy-button">Buy Now</button>
+            </div>
+        </div>
+    </section>
 </div>
+
+<footer class="footer mt-auto">
+    <div class="container-fluid d-flex justify-content-between">
+        <span class="text-muted d-block text-center text-sm-start d-sm-inline-block">Presented by Team 1, TI-216 group</span>
+        <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"> <a> MRSTW project</a> </span>
+    </div>
+</footer>
+
+<style>
+    /* CSS styles for the template */
+    body {
+        font-family: 'Exo 2', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        text-align: center;
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: #777;
+    }
+
+    .section-heading {
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .product-card {
+        width: 200px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card h3 {
+            margin-top: 10px;
+        }
+
+    .buy-button {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+
+    .sale .old-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-left: 5px;
+    }
+
+    .banner {
+        position: relative;
+    }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+    .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: #fff;
+        padding: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-text {
+        max-width: 600px;
+    }
+
+    .banner-overlay h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .banner-overlay p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+</style>
+<script src="../../../assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="../../../assets/js/off-canvas.js"></script>
+<script src="../../../assets/js/misc.js"></script>
+<script src="../../../assets/js/jquery.cookie.js"></script>

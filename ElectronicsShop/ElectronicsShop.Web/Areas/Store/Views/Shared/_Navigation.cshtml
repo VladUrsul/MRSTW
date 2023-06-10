@@ -1,4 +1,5 @@
 ﻿@using ElectronicsShop.BusinessLogic.Services
+@model ElectronicsShop.Web.Areas.AdminPanel.Models.ProductViewModel
 
 
 @{
@@ -40,7 +41,21 @@
                     <i class="mdi mdi-menu"></i> Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        <li><button class="dropdown-item" type="button" onclick="redirectToProductGrid('@category.Name')">@category.Name</button></li>
+                    }
+
                 </ul>
+
+                @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                    @foreach (var category in Model.Categories)
+                    {
+                        <li><button class="dropdown-item" type="button" data-category="@category.Id">@category.Name</button></li>
+                    }
+                </ul>*@
             </li>
         </ul>
 
@@ -88,3 +103,26 @@
 
     </div>
 </nav>
+@*<script>
+    function loadProductGrid(categoryName) {
+        var url = '/Store/Home/ProductGrid?categoryName=' + encodeURIComponent(categoryName);
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            success: function (data) {
+                $('#productGridContainer').html(data);
+            },
+            error: function (xhr, status, error) {
+                console.error(error);
+            }
+        });
+    }
+</script>*@
+
+<script>
+    function redirectToProductGrid(categoryName) {
+        var url = '/Store/Home/ProductGrid?categoryName=' + encodeURIComponent(categoryName);
+        window.location.href = url;
+    }
+</script>
