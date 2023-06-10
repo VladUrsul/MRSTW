@@ -15,6 +15,7 @@ namespace ElectronicsShop.Domain.Entities
         public string Description { get; set; }
 
         public decimal Price { get; set; }
+        public string ImageUrl { get; set; } // Add the ImageUrl property
 
         // reference to the Category entity
         public int CategoryId { get; set; }

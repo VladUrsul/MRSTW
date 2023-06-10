@@ -48,6 +48,7 @@ namespace ElectronicsShop.Web.Areas.AdminPanel.Controllers
                         Name = viewModel.Name,
                         Description = viewModel.Description,
                         Price = viewModel.Price,
+                        ImageUrl = viewModel.ImageUrl,
                         Category = category
                     };
 
