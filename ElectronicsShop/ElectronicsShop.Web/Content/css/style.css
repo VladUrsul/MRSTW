@@ -11498,7 +11498,12 @@ code {
 .bg-gradient-primary {
   background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff)) !important;
   background: linear-gradient(to right, #da8cff, #9a55ff) !important; }
-
+    .bg-gradient-primary:hover {
+        transform: scale(1.025);
+        transition: all ease-in-out 0.5s;
+        background: -webkit-gradient(linear, left top, right top, from(#9a55ff), to(#da8cff)) !important;
+        background: linear-gradient(to right, #9a55ff, #da8cff) !important;
+    }
 .bg-gradient-secondary {
   background: -webkit-gradient(linear, left top, right top, from(#e7ebf0), to(#868e96)) !important;
   background: linear-gradient(to right, #e7ebf0, #868e96) !important; }
@@ -11507,6 +11512,15 @@ code {
   background: -webkit-gradient(linear, left top, right top, from(#84d9d2), to(#07cdae)) !important;
   background: linear-gradient(to right, #84d9d2, #07cdae) !important; }
 
+    .bg-gradient-success:hover {
+        transform: scale(1.025);
+        transition: all ease-in-out 0.5s;
+        background: -webkit-gradient(linear, left top, right top, from(#07cdae), to(#84d9d2)) !important;
+        background: linear-gradient(to right, #07cdae, #84d9d2) !important;
+    }
+
+    }
+
 .bg-gradient-info {
   background: -webkit-gradient(linear, left top, right top, from(#90caf9), color-stop(99%, #047edf)) !important;
   background: linear-gradient(to right, #90caf9, #047edf 99%) !important; }
@@ -11514,11 +11528,21 @@ code {
 .bg-gradient-warning {
   background: -webkit-gradient(linear, left top, right top, from(#f6e384), to(#ffd500)) !important;
   background: linear-gradient(to right, #f6e384, #ffd500) !important; }
-
+    .bg-gradient-warning:hover {
+        transform: scale(1.025);
+        transition: all ease-in-out 0.5s;
+        background: -webkit-gradient(linear, left top, right top, from(#ffd500), to(#f6e384)) !important;
+        background: linear-gradient(to right, #ffd500, #f6e384#ffd500) !important;
+    }
 .bg-gradient-danger {
   background: -webkit-gradient(linear, left top, right top, from(#ffbf96), to(#fe7096)) !important;
   background: linear-gradient(to right, #ffbf96, #fe7096) !important; }
-
+    .bg-gradient-danger:hover {
+        transform: scale(1.025);
+        transition: all ease-in-out 0.5s;
+        background: -webkit-gradient(linear, left top, right top, from(#fe7096), to(#ffbf96)) !important;
+        background: linear-gradient(to right, #fe7096, #ffbf96) !important
+    }
 .bg-gradient-light {
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e4e4e9)) !important;
   background: linear-gradient(to bottom, #f4f4f4, #e4e4e9) !important; }
@@ -11939,21 +11963,47 @@ code {
   background: -webkit-gradient(linear, left top, right top, from(#84d9d2), to(#07cdae));
   background: linear-gradient(to right, #84d9d2, #07cdae);
   color: #ffffff; }
-
+    .badge-gradient-success:hover {
+        transition: all ease-in-out 0.3s;
+        transform: scale(1.2);
+        background: -webkit-gradient(linear, left top, right top, from(#07cdae), to(#84d9d2));
+        background: linear-gradient(to right, #07cdae, #84d9d2);
+    }
 .badge-gradient-info {
   background: -webkit-gradient(linear, left top, right top, from(#90caf9), color-stop(99%, #047edf));
   background: linear-gradient(to right, #90caf9, #047edf 99%);
   color: #ffffff; }
+
+    .badge-gradient-info:hover {
+        transition: all ease-in-out 0.3s;
+        transform: scale(1.2);
+        background: -webkit-gradient(linear, left top, right top, from(#047edf), color-stop(99%, #90caf9));
+        background: linear-gradient(to right, #047edf, #90caf9 99%);
+    }
 
 .badge-gradient-warning {
   background: -webkit-gradient(linear, left top, right top, from(#f6e384), to(#ffd500));
   background: linear-gradient(to right, #f6e384, #ffd500);
   color: #ffffff; }
 
+    .badge-gradient-warning:hover {
+        transition: all ease-in-out 0.3s;
+        transform: scale(1.2);
+        background: -webkit-gradient(linear, left top, right top, from(#ffd500), to(#f6e384));
+        background: linear-gradient(to right, #ffd500, #f6e384#ffd500);
+    }
+
 .badge-gradient-danger {
   background: -webkit-gradient(linear, left top, right top, from(#ffbf96), to(#fe7096));
   background: linear-gradient(to right, #ffbf96, #fe7096);
   color: #ffffff; }
+
+    .badge-gradient-danger:hover {
+        transition: all ease-in-out 0.3s;
+        transform: scale(1.2);
+        background: -webkit-gradient(linear, left top, right top, from(#fe7096), to(#ffbf96));
+        background: linear-gradient(to right, #fe7096, #ffbf96);
+    }
 
 .badge-gradient-light {
   background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e4e4e9));
